@@ -1,0 +1,307 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(62, 127, 184);
+  color: white;
+  text-align: center;
+}
+header {
+  font-family: "Righteous", cursive;
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+.principal,
+.derechaSuperior,
+.bienvenida,
+.centroD,
+.productos,
+.reglas,
+.reservaciones,
+.izquierdaInferior,
+.centroI,
+.resultados,
+.blog,
+.clasesPrivadas,
+.direccion {
+  display: flex;
+}
+
+.derechaSuperior,
+.bienvenida,
+.reservaciones,
+.izquierdaInferior,
+.resultados,
+.blog,
+.direccion {
+  flex-wrap: wrap;
+}
+.principal {
+  margin: 0em 3em;
+  height: 550px;
+  border: 4px solid white;
+  border-radius: 10px;
+  background-color: rgb(31, 88, 139);
+  box-shadow: 0px 0px 30px 0px white;
+}
+.derechaSuperior,
+.izquierdaInferior {
+  width: 50%;
+  height: 100%;
+}
+.derechaSuperior {
+  border-right: 4px solid white;
+}
+.bienvenida,
+.horarios {
+  height: 20%;
+  width: 100%;
+  border-bottom: 4px solid white;
+  align-items: center;
+  justify-content: center;
+}
+.centroD,
+.centroI {
+  height: 60%;
+  width: 100%;
+}
+.clasesGrupales,
+.clasesPrivadas {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 30%;
+}
+.clasesGrupales {
+  background-image: url(/images/tennis3.jpeg);
+  border-right: 4px solid white;
+}
+.clasesGrupales:hover {
+  filter: contrast(40%);
+  align-items: center;
+  content: "Clases Grupales";
+}
+.productosReglas,
+.resultadosBlog {
+  width: 70%;
+  height: 100%;
+}
+.productos,
+.resultados {
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid white;
+}
+.productos {
+  transition: background- 5s !important;
+}
+.productos:hover {
+  background: url(/images/tennis1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.reglas,
+.blog {
+  height: 49%;
+  width: 100%;
+  justify-content: center;
+}
+.reglas {
+  background-image: url(/images/tennis2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: opacity(50%);
+  align-items: center;
+}
+.reglas:hover {
+  filter: brightness(40%);
+}
+.reservaciones,
+.direccion {
+  height: 18%;
+  width: 100%;
+  border-top: 4px solid white;
+  align-items: center;
+  justify-content: center;
+}
+.reservaciones:hover,
+.horarios:hover {
+  background: linear-gradient(rgb(7, 54, 94), rgb(13, 126, 224));
+}
+.izquierdaInferior {
+  border-left: 4px solid white;
+}
+.horarios {
+  font-weight: bold;
+}
+.resultados {
+  font-size: 17px;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  width: 70px;
+}
+thead {
+  background-color: rgb(48, 175, 226);
+  color: white;
+}
+tbody {
+  background-color: white;
+  color: rgb(48, 175, 226);
+}
+tr:hover {
+  background-color: rgb(41, 58, 112);
+  color: white;
+}
+.blog:hover {
+  transition-property: background-image;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  background-image: url(/images/tennis5.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+a {
+  font-weight: bold;
+  font-size: 20px;
+}
+.clasesPrivadas {
+  background-image: url(/images/tennis4.jpeg);
+  border-left: 4px solid white;
+}
+.clasesPrivadas:hover {
+  filter: contrast(40%);
+  align-items: center;
+  content: "Clases Privadas";
+}
+.direccion {
+  background-image: url(/images/tennis6.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-size: 20px;
+}
+.direccion:hover {
+  filter: brightness(150%);
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  h1:hover {
+    color: rgb(8, 47, 115);
+    text-shadow: 2px -2px 25px white, 2px 2px 0px rgb(50, 50, 50);
+  }
+
+  .principal {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    box-shadow: none;
+  }
+  .productosReglas,
+  .resultadosBlog {
+    display: none;
+  }
+  .derechaSuperior {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    border-bottom: 4px solid white;
+  }
+  .bienvenida,
+  .reservaciones,
+  .horarios {
+    background-color: rgb(8, 47, 115);
+  }
+  .bienvenida {
+    width: 98%;
+    height: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-left: 4px solid white;
+  }
+  .bienvenida:hover,
+  .direccion:hover {
+    background-color: rgb(13, 126, 224);
+  }
+  .centroD {
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-right: 4px solid white;
+  }
+  .clasesGrupales {
+    width: 100%;
+    height: 100%;
+  }
+  .clasesGrupales:hover {
+    filter: brightness(150%);
+  }
+  .reservaciones {
+    width: 98%;
+    height: 99%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-left: 4px solid white;
+  }
+  .reservaciones:hover,
+  .horarios:hover {
+    background: none;
+    background-color: rgb(13, 126, 224);
+  }
+  .izquierdaInferior {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    border-top: 4px solid white;
+  }
+  .horarios {
+    width: 98%;
+    height: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-left: 4px solid white;
+  }
+  .centroI {
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border: none;
+  }
+  .clasesPrivadas {
+    width: 100%;
+    height: 99%;
+  }
+  .clasesPrivadas:hover {
+    filter: brightness(150%);
+  }
+  .direccion {
+    width: 98%;
+    height: 95%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-left: 4px solid white;
+    background: none;
+    background-color: rgb(8, 47, 115);
+  }
+  .direccion:hover {
+    filter: none;
+  }
+}
